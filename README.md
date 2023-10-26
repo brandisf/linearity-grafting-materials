@@ -46,7 +46,7 @@ cd main
 bash script/train.sh # Train a CNN-B on CIFAR-10 by Fast adversarial training with eps=2/255
 bash script/verify.sh # verify with Beta-CROWN + branch and bounding on pretrained baseline model
 ```
-The verification process saves information about the instability of neurons (among other things) in the [VERIFY](main/VERIFY/) folder. To create a file containing the instability indicator values per neuron and extract UNR information, use this [notebook](main/notebooks/instability_masks.ipynb). To create a grafting mask, it is additionally necessary to calculate the significance indicator values of the model's neurons. This can be done with the provided script. Adjust model path and significance heuristic accordingly (magnitude, gradient, variance):
+The verification process saves information about the instability of neurons (among other things) in the [VERIFY](main/VERIFY/) folder. To create a file containing the instability indicator values per neuron and extract UNR information, use this [notebook](main/notebooks/instability-masks.ipynb). To create a grafting mask, it is additionally necessary to calculate the significance indicator values of the model's neurons. This can be done with the provided script. Adjust model path and significance heuristic accordingly (magnitude, gradient, variance):
 
 ```
 bash script/calculate_importance_score.sh
